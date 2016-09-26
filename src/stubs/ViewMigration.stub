@@ -1,0 +1,17 @@
+<?php
+
+use CodeZero\LaravelSqlViews\BaseSqlViewMigration;
+
+class {{className}} extends BaseSqlViewMigration {
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder
+     */
+    function getQuery() {
+        // TODO: Implement getQuery() method.
+    }
+
+    function getViewName() {
+        return "{{viewName}}";
+    }
+}
