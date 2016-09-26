@@ -1,5 +1,6 @@
 <?php namespace CodeZero\LaravelSqlViews;
 
+use CodeZero\LaravelSqlViews\Commands\DropViewsCommand;
 use CodeZero\LaravelSqlViews\Commands\GenerateViewMigrationCommand;
 use CodeZero\LaravelSqlViews\Commands\MigrateViewsCommand;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
@@ -34,6 +35,12 @@ class SqlViewsServiceProvider extends LaravelServiceProvider {
         });
 
         $this->commands('command.codezero.view.migrate');
+
+        $this->app->singleton('command.codezero.view.drop', function ($app) {
+            return $app[DropViewsCommand::class];
+        });
+
+        $this->commands('command.codezero.view.drop');
 
     }
 

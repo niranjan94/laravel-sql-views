@@ -6,21 +6,21 @@ use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Composer;
 
-class MigrateViewsCommand extends Command
+class DropViewsCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'migrate:views';
+    protected $signature = 'migrate:drop:views';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Migrate all the MySQL views';
+    protected $description = 'Drop all the MySQL views';
 
     /**
      * The filesystem instance.
@@ -56,13 +56,8 @@ class MigrateViewsCommand extends Command
             $viewClassName = studly_case(basename($viewFile, ".php"));
             $this->info("Processing class $viewClassName");
             $viewMigration = new $viewClassName();
-            if(is_null($viewMigration->getQuery())) {
-                $this->error("Query missing for $viewClassName.");
-            } else {
-                $viewMigration->createView();
-            }
-
-            $this->info("Processed $viewClassName.");
+            $viewMigration->dropView();
+            $this->info("Dropped $viewClassName.");
         }
     }
 }
