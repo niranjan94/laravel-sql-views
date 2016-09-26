@@ -1,15 +1,11 @@
 <?php namespace CodeZero\LaravelSqlViews;
 
+use CodeZero\LaravelSqlViews\Commands\GenerateViewMigrationCommand;
+use CodeZero\LaravelSqlViews\Commands\MigrateViewsCommand;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 class SqlViewsServiceProvider extends LaravelServiceProvider {
 
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = true;
 
     /**
      * Bootstrap the application events.
@@ -18,7 +14,6 @@ class SqlViewsServiceProvider extends LaravelServiceProvider {
      */
     public function boot() {
 
-        $this->handleConfigs();
     }
 
     /**
@@ -28,27 +23,18 @@ class SqlViewsServiceProvider extends LaravelServiceProvider {
      */
     public function register() {
 
-        // Bind any implementations.
+        $this->app->singleton('command.codezero.view.make', function ($app) {
+            return $app[GenerateViewMigrationCommand::class];
+        });
 
-    }
+        $this->commands('command.codezero.view.make');
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides() {
+        $this->app->singleton('command.codezero.view.migrate', function ($app) {
+            return $app[MigrateViewsCommand::class];
+        });
 
-        return [];
-    }
+        $this->commands('command.codezero.view.migrate');
 
-    private function handleConfigs() {
-
-        $configPath = __DIR__ . '/../config/sql-views.php';
-
-        $this->publishes([$configPath => config_path('sql-views.php')]);
-
-        $this->mergeConfigFrom($configPath, 'sql-views');
     }
 
 }
