@@ -3,6 +3,7 @@
   "description": "MySQL Views generator for Laravel 5",
   "keywords": ["laravel", "mysql", "views", "laravel5"],
   "homepage": "https://github.com/niranjan94/laravel-sql-views",
+  "version": "1.0.0",
   "license": "MIT",
   "authors": [
     {
