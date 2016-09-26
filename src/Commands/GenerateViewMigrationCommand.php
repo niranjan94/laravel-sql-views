@@ -64,7 +64,7 @@ class GenerateViewMigrationCommand extends Command
 
         $stub = $this->files->get(__DIR__ . '/../stubs/ViewMigration.stub');
 
-        $stub = str_replace('{{className}}', camel_case($viewName), $stub);
+        $stub = str_replace('{{className}}', studly_case($viewName), $stub);
         $stub = str_replace('{{viewName}}', $viewName, $stub);
 
         $this->files->put($path, $stub);
