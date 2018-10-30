@@ -8,7 +8,6 @@
 
 namespace CodeZero\LaravelSqlViews;
 
-
 use Illuminate\Support\Facades\DB;
 
 abstract class BaseSqlViewMigration
@@ -16,15 +15,17 @@ abstract class BaseSqlViewMigration
     /**
      * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Query\Builder
      */
-    abstract function getQuery();
-    abstract function getViewName();
+    abstract public function getQuery();
+    abstract public function getViewName();
 
-    function createView() {
+    public function createView()
+    {
         $sqlQuery = $this->getQuery()->toSql();
         DB::statement("CREATE OR REPLACE VIEW {$this->getViewName()} AS {$sqlQuery}");
     }
 
-    function dropView() {
+    public function dropView()
+    {
         DB::statement("DROP VIEW IF EXISTS {$this->getViewName()}");
     }
 }

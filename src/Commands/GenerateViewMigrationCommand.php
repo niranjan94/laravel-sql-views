@@ -22,7 +22,6 @@ class GenerateViewMigrationCommand extends Command
      */
     protected $description = 'Generate an empty MySQL view migration file';
 
-
     /**
      * The filesystem instance.
      *
@@ -60,7 +59,6 @@ class GenerateViewMigrationCommand extends Command
         }
 
         $this->makeDirectory($path);
-
 
         $stub = $this->files->get(__DIR__ . '/../stubs/ViewMigration.stub');
 

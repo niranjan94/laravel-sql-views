@@ -56,7 +56,7 @@ class MigrateViewsCommand extends Command
             $viewClassName = studly_case(basename($viewFile, ".php"));
             $this->info("Processing class $viewClassName");
             $viewMigration = new $viewClassName();
-            if(is_null($viewMigration->getQuery())) {
+            if (is_null($viewMigration->getQuery())) {
                 $this->error("Query missing for $viewClassName.");
             } else {
                 $viewMigration->createView();
