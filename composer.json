@@ -5,13 +5,15 @@
   "homepage": "https://github.com/niranjan94/laravel-sql-views",
   "version": "1.0.0",
   "license": "MIT",
-  "authors": [{
-    "name": "Niranjan Rajendran",
-    "email": "niranjan94@yahoo.com"
-  }],
+  "authors": [
+    {
+      "name": "Niranjan Rajendran",
+      "email": "niranjan94@yahoo.com"
+    }
+  ],
   "require": {
     "php": ">=5.4.0",
-    "laravel/framework": "^5.1"
+    "laravel/framework": "5.0.*|5.1.*|5.2.*|5.3.*"
 
   },
   "require-dev": {
@@ -22,12 +24,5 @@
       "CodeZero\\LaravelSqlViews\\": "src/"
     }
   },
-  "minimum-stability": "dev",
-  "extra": {
-    "laravel": {
-      "providers": [
-        "CodeZero\\LaravelSqlViews\\SqlViewsServiceProvider"
-      ]
-    }
-  }
+  "minimum-stability": "dev"
 }
