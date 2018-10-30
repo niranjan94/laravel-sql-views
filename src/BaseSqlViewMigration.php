@@ -19,12 +19,8 @@ abstract class BaseSqlViewMigration
     abstract function getQuery();
     abstract function getViewName();
 
-    function createView() {
+    function generateView() {
         $sqlQuery = $this->getQuery()->toSql();
         DB::statement("CREATE OR REPLACE VIEW {$this->getViewName()} AS {$sqlQuery}");
-    }
-
-    function dropView() {
-        DB::statement("DROP VIEW IF EXISTS {$this->getViewName()}");
     }
 }
