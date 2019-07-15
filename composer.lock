@@ -1045,12 +1045,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "79860cda331a2edb497c72ee487ed75c484ab75e"
+                "reference": "4965d5a969a9e67864613d709fbfdab15d6d3ad7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/79860cda331a2edb497c72ee487ed75c484ab75e",
-                "reference": "79860cda331a2edb497c72ee487ed75c484ab75e",
+                "url": "https://api.github.com/repos/symfony/console/zipball/4965d5a969a9e67864613d709fbfdab15d6d3ad7",
+                "reference": "4965d5a969a9e67864613d709fbfdab15d6d3ad7",
                 "shasum": ""
             },
             "require": {
@@ -1109,7 +1109,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-13T10:57:15+00:00"
+            "time": "2019-07-10T18:39:05+00:00"
         },
         {
             "name": "symfony/contracts",
@@ -1238,12 +1238,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "b6d3ae55c01ff250b09fabc8bfa45e21d23a4d97"
+                "reference": "8a212666c045f53fa5ebc406634a1ceafb88604b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/b6d3ae55c01ff250b09fabc8bfa45e21d23a4d97",
-                "reference": "b6d3ae55c01ff250b09fabc8bfa45e21d23a4d97",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/8a212666c045f53fa5ebc406634a1ceafb88604b",
+                "reference": "8a212666c045f53fa5ebc406634a1ceafb88604b",
                 "shasum": ""
             },
             "require": {
@@ -1286,7 +1286,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-28T12:00:38+00:00"
+            "time": "2019-07-12T05:51:03+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -1407,12 +1407,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "b8d9ff2d03542485d5ec82defc28be3291f6b0e7"
+                "reference": "2565092dede0585ebfc63286a3ceb01c8f7d2af4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b8d9ff2d03542485d5ec82defc28be3291f6b0e7",
-                "reference": "b8d9ff2d03542485d5ec82defc28be3291f6b0e7",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/2565092dede0585ebfc63286a3ceb01c8f7d2af4",
+                "reference": "2565092dede0585ebfc63286a3ceb01c8f7d2af4",
                 "shasum": ""
             },
             "require": {
@@ -1453,7 +1453,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-28T12:55:49+00:00"
+            "time": "2019-07-10T18:39:05+00:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -1461,12 +1461,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "cb13cf80477ca90b35f5578c87b44ebabd98d169"
+                "reference": "68654b540f62a4c422cd6cd669a8c49b7f12ddff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/cb13cf80477ca90b35f5578c87b44ebabd98d169",
-                "reference": "cb13cf80477ca90b35f5578c87b44ebabd98d169",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/68654b540f62a4c422cd6cd669a8c49b7f12ddff",
+                "reference": "68654b540f62a4c422cd6cd669a8c49b7f12ddff",
                 "shasum": ""
             },
             "require": {
@@ -1542,7 +1542,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-26T14:23:57+00:00"
+            "time": "2019-07-11T10:26:05+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2199,12 +2199,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phar-io/manifest.git",
-                "reference": "d740c1234c32a3b8c0e1d3044151277baceb522c"
+                "reference": "8c8bd1bb1a22f311b1b4886662b989d0d02aab77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phar-io/manifest/zipball/d740c1234c32a3b8c0e1d3044151277baceb522c",
-                "reference": "d740c1234c32a3b8c0e1d3044151277baceb522c",
+                "url": "https://api.github.com/repos/phar-io/manifest/zipball/8c8bd1bb1a22f311b1b4886662b989d0d02aab77",
+                "reference": "8c8bd1bb1a22f311b1b4886662b989d0d02aab77",
                 "shasum": ""
             },
             "require": {
@@ -2250,7 +2250,7 @@
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
-            "time": "2019-07-06T18:30:24+00:00"
+            "time": "2019-07-09T12:18:04+00:00"
         },
         {
             "name": "phar-io/version",
@@ -2768,16 +2768,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.2.4",
+            "version": "8.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "25fe0b5031b24722f66a75ad479a074cccc1bb37"
+                "reference": "c1b8534b3730f20f58600124129197bf1183dc92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/25fe0b5031b24722f66a75ad479a074cccc1bb37",
-                "reference": "25fe0b5031b24722f66a75ad479a074cccc1bb37",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c1b8534b3730f20f58600124129197bf1183dc92",
+                "reference": "c1b8534b3730f20f58600124129197bf1183dc92",
                 "shasum": ""
             },
             "require": {
@@ -2847,7 +2847,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-07-03T08:30:33+00:00"
+            "time": "2019-07-15T06:26:24+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
