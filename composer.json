@@ -1,7 +1,7 @@
 {
   "name": "niranjan94/laravel-sql-views",
-  "description": "MySQL Views generator for Laravel 5",
-  "keywords": ["laravel", "mysql", "views", "laravel5"],
+  "description": "MySQL Views generator for Laravel 7",
+  "keywords": ["laravel", "mysql", "views", "laravel7"],
   "homepage": "https://github.com/niranjan94/laravel-sql-views",
   "version": "1.0.0",
   "license": "MIT",
@@ -12,12 +12,12 @@
     }
   ],
   "require": {
-    "php": ">=5.4.0",
-    "laravel/framework": "^5.1"
+    "php": ">=7.2.5",
+    "laravel/framework": "7.x"
 
   },
   "require-dev": {
-    "phpunit/phpunit": "^8.1"
+    "phpunit/phpunit": "^8.5"
   },
   "autoload": {
     "psr-4": {
