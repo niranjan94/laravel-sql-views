@@ -55,7 +55,8 @@ class GenerateViewMigrationCommand extends Command
     {
         $viewName = Str::snake($this->argument('viewName'));
 
-        if ($this->files->exists($path = $this->getPath($viewName))) {
+        $path = $this->getPath($viewName);
+        if ($this->files->exists($path)) {
             $this->error('View file already exists!');
             exit;
         }
