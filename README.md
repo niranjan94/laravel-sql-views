@@ -1,1 +1,1 @@
-### MySQL Views generator for Laravel 5
+### MySQL Views generator for Laravel 8
