@@ -54,6 +54,7 @@ class MigrateViewsCommand extends Command
     {
         $viewFiles = $this->files->allFiles(base_path() . '/database/views/');
         foreach ($viewFiles as $viewFile) {
+            require_once($viewFile);
             $this->info("Detected $viewFile");
             $viewClassName = Str::studly(basename($viewFile, ".php"));
             $this->info("Processing class $viewClassName");
