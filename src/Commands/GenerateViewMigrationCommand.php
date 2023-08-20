@@ -5,6 +5,7 @@ namespace CodeZero\LaravelSqlViews\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Composer;
+use Illuminate\Support\Str;
 
 class GenerateViewMigrationCommand extends Command
 {
@@ -52,9 +53,10 @@ class GenerateViewMigrationCommand extends Command
      */
     public function handle()
     {
-        $viewName = snake_case($this->argument('viewName'));
+        $viewName = Str::snake($this->argument('viewName'));
 
-        if ($this->files->exists($path = $this->getPath($viewName))) {
+        $path = $this->getPath($viewName);
+        if ($this->files->exists($path)) {
             $this->error('View file already exists!');
             exit;
         }
@@ -64,15 +66,14 @@ class GenerateViewMigrationCommand extends Command
 
         $stub = $this->files->get(__DIR__ . '/../stubs/ViewMigration.stub');
 
-        $stub = str_replace('{{className}}', studly_case($viewName), $stub);
-        $stub = str_replace('{{viewName}}', $viewName, $stub);
+        $stub = Str::replaceArray('{{className}}', [studly_case($viewName)], $stub);
+        $stub = Str::replaceArray('{{viewName}}', [$viewName], $stub);
 
         $this->files->put($path, $stub);
 
         $this->info('Empty View migration file created successfully.');
 
         $this->composer->dumpAutoloads();
-
     }
 
     /**
@@ -97,5 +98,4 @@ class GenerateViewMigrationCommand extends Command
             $this->files->makeDirectory(dirname($path), 0777, true, true);
         }
     }
-
 }
